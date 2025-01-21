@@ -20,7 +20,7 @@ const FundoGradiente = styled.div`
 const AppContainer = styled.div`
   width: 1440px;
   margin: 0 auto;
-  min-width: 100%;
+  max-width: 100%;
 `;
 
 const MainContainer = styled.main`

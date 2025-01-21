@@ -1,5 +1,15 @@
+import TituloEstilizado from "../Titulo";
+import Tags from "./Tags";
+
 const Galeria = () => {
-  return <h2>Navegue pela galeria! 🚀 🛰️</h2>;
+  return (
+    <>
+      <Tags />
+      <TituloEstilizado>
+        Navegue pela galeria <span>🚀 🛰️</span>
+      </TituloEstilizado>
+    </>
+  );
 };
 
 export default Galeria;
