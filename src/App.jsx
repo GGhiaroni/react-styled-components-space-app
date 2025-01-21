@@ -16,16 +16,31 @@ const FundoGradiente = styled.div`
   min-height: 100vh;
 `;
 
+const AppContainer = styled.div`
+  width: 1440px;
+  margin: 0 auto;
+  max-width: 100%;
+`;
+
+const MainContainer = styled.main`
+  display: flex;
+  gap: 24px;
+`;
+
 function App() {
   return (
     <FundoGradiente>
       <EstilosGlobais />
-      <Header />
-      <BarraLateral />
-      <Banner
-        texto="A galeria mais completa do espaço!"
-        backgroundImage={bannerBackground}
-      />
+      <AppContainer>
+        <Header />
+        <MainContainer>
+          <BarraLateral />
+          <Banner
+            texto="A galeria mais completa do espaço!"
+            backgroundImage={bannerBackground}
+          />
+        </MainContainer>
+      </AppContainer>
     </FundoGradiente>
   );
 }
