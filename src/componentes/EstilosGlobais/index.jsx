@@ -8,6 +8,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  font-family: 'Poppins', monospace, monospace; 
 }
 main {
   display: block;
@@ -36,7 +37,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; 
+  font-family: 'Poppins', monospace, monospace; 
   font-size: 1em; 
 }
 small {
