@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BarraLateral from "./componentes/BarraLateral";
 import EstilosGlobais from "./componentes/EstilosGlobais";
 import Header from "./componentes/Header";
 
@@ -18,6 +19,7 @@ function App() {
     <FundoGradiente>
       <EstilosGlobais />
       <Header />
+      <BarraLateral />
     </FundoGradiente>
   );
 }
