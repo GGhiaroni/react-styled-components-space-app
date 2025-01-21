@@ -1,14 +1,26 @@
 import { createGlobalStyle } from "styled-components";
+import GandhiSansBold from "./fontes/GandhiSans-Bold.otf";
+import GandhiSansRegular from "./fontes/GandhiSans-Regular.otf";
 
 const EstilosGlobais = createGlobalStyle`
+@font-face {
+  font-family: 'GandhiSansRegular';
+  src: local('Gandhi Sans Regular'), local('GandhiSansRegular'), url(${GandhiSansRegular});
+}
+
+@font-face {
+  font-family: 'GandhiSansBold';
+  src: local('Gandhi Sans Bold'), local('GandhiSansBold'), url(${GandhiSansBold});
+}
+
 html {
   line-height: 1.15; 
-  -webkit-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
+  font-family : GandhiSansRegular;
 }
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Poppins', monospace, monospace; 
 }
 main {
   display: block;
@@ -37,7 +49,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: 'Poppins', monospace, monospace; 
+  font-family: monospace, monospace; 
   font-size: 1em; 
 }
 small {
