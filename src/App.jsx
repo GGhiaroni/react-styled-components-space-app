@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import bannerBackground from "./assets/banner.png";
+import Banner from "./componentes/Banner";
 import BarraLateral from "./componentes/BarraLateral";
 import EstilosGlobais from "./componentes/EstilosGlobais";
 import Header from "./componentes/Header";
@@ -20,6 +22,10 @@ function App() {
       <EstilosGlobais />
       <Header />
       <BarraLateral />
+      <Banner
+        texto="A galeria mais completa do espaço!"
+        backgroundImage={bannerBackground}
+      />
     </FundoGradiente>
   );
 }
