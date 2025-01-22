@@ -6,6 +6,9 @@ import EstilosGlobais from "./componentes/EstilosGlobais";
 import Galeria from "./componentes/Galeria";
 import Header from "./componentes/Header";
 
+import { useState } from "react";
+import fotos from "./fotos.json";
+
 const FundoGradiente = styled.div`
   background: linear-gradient(
     174.61deg,
@@ -34,7 +37,9 @@ const ConteudoGaleria = styled.section`
   flex-grow: 1;
 `;
 
-function App() {
+const App = () => {
+  const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos);
+
   return (
     <FundoGradiente>
       <EstilosGlobais />
@@ -47,12 +52,12 @@ function App() {
               texto="A galeria mais completa do espaço!"
               backgroundImage={bannerBackground}
             />
-            <Galeria />
+            <Galeria fotos={fotosDaGaleria} />
           </ConteudoGaleria>
         </MainContainer>
       </AppContainer>
     </FundoGradiente>
   );
-}
+};
 
 export default App;

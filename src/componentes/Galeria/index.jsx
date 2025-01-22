@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import TituloEstilizado from "../Titulo";
+import Imagem from "./Imagem";
 import Populares from "./Populares";
 import Tags from "./Tags";
 
@@ -11,7 +12,7 @@ const SessaoFluidaGaleria = styled.section`
   flex-grow: 1;
 `;
 
-const Galeria = () => {
+const Galeria = ({ fotos = [] }) => {
   return (
     <>
       <Tags />
@@ -20,6 +21,9 @@ const Galeria = () => {
           <TituloEstilizado>
             Navegue pela galeria <span>🚀 🛰️</span>
           </TituloEstilizado>
+          {fotos.map((foto) => (
+            <Imagem foto={foto} />
+          ))}
         </SessaoFluidaGaleria>
         <Populares />
       </GaleriaContainer>
