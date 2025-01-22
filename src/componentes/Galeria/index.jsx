@@ -22,7 +22,12 @@ const Galeria = ({ fotos = [] }) => {
             Navegue pela galeria <span>🚀 🛰️</span>
           </TituloEstilizado>
           {fotos.map((foto) => (
-            <Imagem foto={foto} />
+            <Imagem
+              foto={foto}
+              src={foto.path}
+              titulo={foto.titulo}
+              fonte={foto.fonte}
+            />
           ))}
         </SessaoFluidaGaleria>
         <Populares />
