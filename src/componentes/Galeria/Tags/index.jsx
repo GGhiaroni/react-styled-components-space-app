@@ -1,5 +1,14 @@
+import tags from "./tags.json";
+
 const Tags = () => {
-  return <h2>Tags.....</h2>;
+  return (
+    <>
+      <p>Busque por tags:</p>
+      {tags.map((tag) => (
+        <button key={tag.id}>{tag.titulo}</button>
+      ))}
+    </>
+  );
 };
 
 export default Tags;
