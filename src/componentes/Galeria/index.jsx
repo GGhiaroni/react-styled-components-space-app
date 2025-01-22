@@ -12,6 +12,13 @@ const SessaoFluidaGaleria = styled.section`
   flex-grow: 1;
 `;
 
+const ImagensContainer = styled.section`
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 24px;
+`;
+
 const Galeria = ({ fotos = [] }) => {
   return (
     <>
@@ -21,14 +28,18 @@ const Galeria = ({ fotos = [] }) => {
           <TituloEstilizado>
             Navegue pela galeria <span>🚀 🛰️</span>
           </TituloEstilizado>
-          {fotos.map((foto) => (
-            <Imagem
-              foto={foto}
-              src={foto.path}
-              titulo={foto.titulo}
-              fonte={foto.fonte}
-            />
-          ))}
+          <ImagensContainer>
+            {fotos.map((foto) => (
+              <Imagem
+                key={foto.id}
+                id={foto.id}
+                foto={foto}
+                src={foto.path}
+                titulo={foto.titulo}
+                fonte={foto.fonte}
+              />
+            ))}
+          </ImagensContainer>
         </SessaoFluidaGaleria>
         <Populares />
       </GaleriaContainer>
