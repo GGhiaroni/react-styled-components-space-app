@@ -38,6 +38,10 @@ const ConteudoGaleria = styled.section`
   flex-grow: 1;
 `;
 
+const aoFavoritar = (foto) => {
+  console.log(foto);
+};
+
 const App = () => {
   const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos);
   const [fotoSelecionada, setFotoSelecionada] = useState(null);
@@ -56,6 +60,7 @@ const App = () => {
             <Galeria
               fotos={fotosDaGaleria}
               aoSelecionarFoto={(foto) => setFotoSelecionada(foto)}
+              aoFavoritarFoto={aoFavoritar}
             />
           </ConteudoGaleria>
         </MainContainer>
