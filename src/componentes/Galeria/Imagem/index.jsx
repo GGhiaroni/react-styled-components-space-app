@@ -10,6 +10,7 @@ const Figure = styled.figure`
   & > img {
     max-width: 100%;
     border-radius: 20px 20px 0 0;
+    cursor: pointer;
   }
   figcaption {
     background-color: #001634;
@@ -48,7 +49,11 @@ const Imagem = ({
 }) => {
   return (
     <Figure $expandida={expandida} id={`foto-${id}`}>
-      <img src={src} alt={`imagem galeria ${titulo}`} />
+      <img
+        src={src}
+        alt={`imagem galeria ${titulo}`}
+        onClick={() => aoDarZoomNaFoto(foto)}
+      />
       <figcaption>
         <h3>{titulo}</h3>
         <Rodape>
