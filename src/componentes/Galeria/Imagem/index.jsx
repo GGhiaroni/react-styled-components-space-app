@@ -48,6 +48,7 @@ const Imagem = ({
   aoDarZoomNaFoto,
   aoFavoritarFoto,
   favorita,
+  fotoSelecionada,
 }) => {
   return (
     <Figure $expandida={expandida} id={`foto-${id}`}>
