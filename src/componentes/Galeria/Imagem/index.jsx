@@ -47,6 +47,7 @@ const Imagem = ({
   expandida = false,
   aoDarZoomNaFoto,
   aoFavoritarFoto,
+  favorita,
 }) => {
   return (
     <Figure $expandida={expandida} id={`foto-${id}`}>
@@ -60,7 +61,12 @@ const Imagem = ({
         <Rodape>
           <h4>{fonte}</h4>
           <BotaoIcone onClick={() => aoFavoritarFoto(foto)}>
-            <img src="/icones/favorito.png" alt="Ícone de favorito" />
+            <img
+              src={`${
+                favorita ? "/icones/favorito-ativo.png" : "/icones/favorito.png"
+              }`}
+              alt="Ícone de favorito"
+            />
           </BotaoIcone>
           {!expandida && (
             <BotaoIcone

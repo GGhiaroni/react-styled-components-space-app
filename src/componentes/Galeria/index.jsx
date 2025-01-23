@@ -33,6 +33,7 @@ const Galeria = ({ fotos = [], aoSelecionarFoto, aoFavoritarFoto }) => {
               <Imagem
                 aoDarZoomNaFoto={aoSelecionarFoto}
                 aoFavoritarFoto={aoFavoritarFoto}
+                favorita={foto.favorita}
                 key={foto.id}
                 id={foto.id}
                 foto={foto}
